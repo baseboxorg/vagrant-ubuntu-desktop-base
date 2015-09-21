@@ -13,10 +13,11 @@ Vagrant.configure(2) do |config|
     vb.gui = true
 
     # Customize the amount of memory on the VM:
-    vb.memory = "1024"
+    vb.memory = "2048"
   end
 
   config.vm.provision "shell", inline: <<-SHELL
+    sudo sh -c "echo 'set grub-pc/install_devices /dev/sda' | debconf-communicate"
     sudo apt-get update
     sudo apt-get upgrade -y
     sudo apt-get install -y git wget build-essential linux-headers-server
