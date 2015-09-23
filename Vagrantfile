@@ -35,6 +35,7 @@ Vagrant.configure(2) do |config|
     sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O google-chrome-stable_current_amd64.deb
     sudo apt-get install -y libappindicator1 libindicator7
     sudo dpkg -i google-chrome-stable_current_amd64.deb
+    sudo apt-get install -y vim-gnome gnome-font-viewer ctags
   SHELL
 
   # vbox addition
