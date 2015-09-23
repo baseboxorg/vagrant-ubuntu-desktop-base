@@ -24,7 +24,7 @@ Vagrant.configure(2) do |config|
     sudo apt-get install -y linux-headers-$(uname -r)
     sudo apt-get install -y language-pack-ja
     sudo update-locale LANG=ja_JP.UTF-8
-    sudo apt-get install -y ubuntu-desktop
+    sudo apt-get install -y xubuntu-desktop
     sudo sh -c "echo '[SeatDefaults]' > /usr/share/lightdm/lightdm.conf.d/50-ubuntu.conf"
     sudo sh -c "echo 'user-session=ubuntu' >> /usr/share/lightdm/lightdm.conf.d/50-ubuntu.conf"
     sudo sh -c "echo 'allow-guest=false' >> /usr/share/lightdm/lightdm.conf.d/50-ubuntu.conf"
@@ -33,7 +33,7 @@ Vagrant.configure(2) do |config|
     sudo loadkeys jp
     sudo sh -c "echo 'Asia/Tokyo' > /etc/timezone && dpkg-reconfigure -f noninteractive tzdata"
     sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O google-chrome-stable_current_amd64.deb
-    sudo apt-get install -i libappindicator1 libindicator7
+    sudo apt-get install -y libappindicator1 libindicator7
     sudo dpkg -i google-chrome-stable_current_amd64.deb
   SHELL
 
